@@ -23,6 +23,7 @@ Chamada chamada = new ChamadaBuilder()
  
  .build();
  
+ 
 3. Decorator Pattern - Regras Extras
 Este padrão permite adicionar funcionalidades extras às chamadas sem alterar sua estrutura. Cada regra
 (como EPI obrigatório ou transporte incluso) é um decorador.
@@ -30,8 +31,11 @@ Este padrão permite adicionar funcionalidades extras às chamadas sem alterar s
 Exemplo:
 
 ChamadaBase chamadaDecorada = new ChamadaSimples(chamada.toString());
+
 chamadaDecorada = new RequisitoEPI(chamadaDecorada);
+
 chamadaDecorada = new TransporteIncluso(chamadaDecorada);
+
 
 5. Strategy Pattern - Estratégia de Notificação
 O padrão Strategy permite definir diferentes formas de notificar os trabalhadores (SMS, Email, App),
@@ -40,8 +44,11 @@ trocando a implementação sem mudar o código principal.
 Exemplo:
 
 NotificacaoStrategy notificacao = new NotificacaoApp();
+
 notificacao.notificar("Nova chamada: " + chamadaDecorada.getDescricao());
+
 Funcionamento Completo
+
 1. Cria a chamada com Builder.
 2. Aplica regras com Decorator.
 3. Envia notificação com Strategy.
