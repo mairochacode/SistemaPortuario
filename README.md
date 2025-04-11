@@ -12,6 +12,7 @@ O padrão Builder é usado para montar objetos complexos de forma clara e passo 
 longos e melhora a legibilidade do código.
 
 Exemplo:
+
 Chamada chamada = new ChamadaBuilder()
  .setTurno("Noturno")
  .setAtividade("Descarga de navio")
@@ -23,6 +24,7 @@ Este padrão permite adicionar funcionalidades extras às chamadas sem alterar s
 (como EPI obrigatório ou transporte incluso) é um decorador.
 
 Exemplo:
+
 ChamadaBase chamadaDecorada = new ChamadaSimples(chamada.toString());
 chamadaDecorada = new RequisitoEPI(chamadaDecorada);
 chamadaDecorada = new TransporteIncluso(chamadaDecorada);
@@ -32,6 +34,7 @@ O padrão Strategy permite definir diferentes formas de notificar os trabalhador
 trocando a implementação sem mudar o código principal.
 
 Exemplo:
+
 NotificacaoStrategy notificacao = new NotificacaoApp();
 notificacao.notificar("Nova chamada: " + chamadaDecorada.getDescricao());
 Funcionamento Completo
@@ -41,6 +44,7 @@ Funcionamento Completo
 Tudo isso de forma desacoplada, clara e flexível.
 
 Benefícios
+
 - Código organizado e modular
 - Fácil de expandir (mais tipos de notificações, regras, etc)
 - Ideal para praticar e demonstrar conhecimentos em Padrões de Projeto.
