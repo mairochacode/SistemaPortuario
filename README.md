@@ -12,6 +12,7 @@ Decorator (para adicionar regras extras)
 Strategy (para definir como os trabalhadores são notificados).
 
 
+
 1. Builder Pattern - Criando Chamadas
    
 O padrão Builder é usado para montar objetos complexos de forma clara e passo a passo. Evita construtores
