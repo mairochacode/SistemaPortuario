@@ -14,9 +14,13 @@ longos e melhora a legibilidade do código.
 Exemplo:
 
 Chamada chamada = new ChamadaBuilder()
+
  .setTurno("Noturno")
+ 
  .setAtividade("Descarga de navio")
+ 
  .setLocal("Terminal 1")
+ 
  .build();
  
 3. Decorator Pattern - Regras Extras
